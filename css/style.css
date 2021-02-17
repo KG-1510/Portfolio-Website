@@ -8,8 +8,9 @@ body{
     max-width: 100%;
     overflow-x: hidden !important;
 }
-/* Responsive mobile */
-@media screen and (max-width: 667px) {
+/* Responsive */
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 300px) {  
   body {
       overflow-x: hidden !important;
   }
@@ -17,6 +18,30 @@ body{
       max-width: 100% !important;
       overflow-x: hidden !important;
   }
+  .typed{
+    font-size: 2.5rem;
+  }
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+  .typed{
+    font-size: 3.2rem;
+  }
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .typed{
+    font-size: 4rem;
+  }
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  .typed{
+    font-size: 4.7rem;
+  }   
 }
 
 /* Scrollbar Horizontal Customization */
@@ -156,12 +181,11 @@ body{
     padding-bottom: 10rem;
     width: 80%;
 }
-.typed{
+/* .typed{
     font-size: 5rem;
     text-align: center;
     padding-top: 6rem;
-
-}
+} */
 #hero-button{
     background-color: #1b262c;
     color:#bbe1fa;
