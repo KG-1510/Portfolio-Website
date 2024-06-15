@@ -503,11 +503,6 @@ body {
   width: 100%;
 }
 
-/* Image */
-.my-face {
-  border-radius: 50%;
-}
-
 /* Skills */
 .skill-card {
   display: flex;
