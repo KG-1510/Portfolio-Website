@@ -503,6 +503,26 @@ body {
   width: 100%;
 }
 
+/* Image */
+.my-face {
+  border-radius: 50%;
+}
+
+/* Skills */
+.skill-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4px;
+
+  img {
+    width: auto;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+  }
+}
 /* Footer */
 .footer-section {
   text-align: center;
