@@ -77,15 +77,15 @@ export default function About() {
                     <span className="absolute -left-[5px] top-2 h-2 w-2 rounded-full bg-primary" />
                     <div className="flex flex-col gap-1 mb-3 md:flex-row md:items-start md:justify-between">
                       <div className="flex items-start gap-3">
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-border bg-white/95 p-1.5">
+                        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg border border-border bg-white/95 p-2">
                           {entry.logo ? (
                             <img
                               src={logoUrl(entry.logo)}
                               alt={`${entry.company} logo`}
                               className="h-full w-full object-contain"
                               loading="lazy"
-                              width={40}
-                              height={40}
+                              width={56}
+                              height={56}
                             />
                           ) : (
                             <span className="font-mono text-sm font-medium text-background">
