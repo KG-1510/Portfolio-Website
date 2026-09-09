@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-label="MovieBot chat recommending movies">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1c1c1c" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="540" fill="#0a0a0a"/>
+  <rect width="960" height="540" fill="url(#grid)"/>
+  <rect x="80" y="60" width="800" height="420" rx="14" fill="#111" stroke="#262626" stroke-width="2"/>
+  <rect x="80" y="60" width="800" height="44" rx="14" fill="#171717"/>
+  <rect x="80" y="90" width="800" height="14" fill="#171717"/>
+  <circle cx="108" cy="82" r="6" fill="#ff5f57"/>
+  <circle cx="130" cy="82" r="6" fill="#febc2e"/>
+  <circle cx="152" cy="82" r="6" fill="#28c840"/>
+  <text x="480" y="87" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#737373" text-anchor="middle">MovieBot — cosine similarity over 5,000 titles</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">
+    <!-- user -->
+    <rect x="420" y="130" width="420" height="44" rx="12" fill="#4ade80"/>
+    <text x="440" y="159" fill="#0a0a0a">I liked Interstellar and Arrival.</text>
+    <!-- bot -->
+    <rect x="120" y="196" width="560" height="44" rx="12" fill="#171717" stroke="#262626"/>
+    <text x="140" y="225" fill="#d4d4d4"><tspan fill="#4ade80">bot ›</tspan> Cerebral sci-fi. Try these:</text>
+    <rect x="120" y="252" width="560" height="150" rx="12" fill="#171717" stroke="#262626"/>
+    <text x="140" y="284" fill="#d4d4d4">1. Contact <tspan fill="#737373">· similarity 0.91</tspan></text>
+    <text x="140" y="318" fill="#d4d4d4">2. Ad Astra <tspan fill="#737373">· similarity 0.87</tspan></text>
+    <text x="140" y="352" fill="#d4d4d4">3. Moon <tspan fill="#737373">· similarity 0.84</tspan></text>
+    <text x="140" y="386" fill="#d4d4d4">4. Gattaca <tspan fill="#737373">· similarity 0.82</tspan></text>
+    <!-- input -->
+    <rect x="120" y="424" width="720" height="40" rx="10" fill="#0a0a0a" stroke="#262626"/>
+    <text x="140" y="451" fill="#737373">Tell me a movie you liked… <tspan fill="#4ade80">▍</tspan></text>
+  </g>
+</svg>

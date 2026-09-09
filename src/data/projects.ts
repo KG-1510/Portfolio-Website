@@ -7,6 +7,8 @@ export interface Project {
   fullDescription: string;
   stack: string[];
   impact: string;
+  /** File name under public/thumbs/, 16:9. */
+  image?: string;
   highlights: string[];
   challenges?: string[];
   github?: string;
@@ -17,17 +19,18 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "stride-club",
-    name: "Stride Club",
+    image: "stride-club.jpg",
+    name: "Stride Run Club web app",
     description:
-      "The website for my run club, built and launched solo on Next.js and Supabase. 2,000+ visitors a month, now growing into a ticketing platform with Razorpay payments.",
+      "The web app for my run club, built and launched solo on Next.js and Supabase. 2,000+ visitors a month, with Razorpay payments already live for event tickets.",
     fullDescription:
-      "strideclub.in started as a place for my run club to point people at. I designed, built, and launched it alone with Next.js and Supabase. It now brings in 2,000+ visitors a month and is turning into a ticketing platform for club events, with Razorpay handling payments.",
+      "strideclub.in started as a place for my run club to point people at. I designed, built, and launched it alone with Next.js and Supabase. It now brings in 2,000+ visitors a month, and event ticketing runs on it with Razorpay payments already integrated.",
     stack: ["Next.js", "TypeScript", "Supabase", "Razorpay", "Tailwind CSS"],
-    impact: "2,000+ monthly visitors, solo build",
+    impact: "2,000+ monthly visitors, payments live, solo build",
     highlights: [
       "Built and launched solo, from design to deploy",
       "Supabase for auth, data, and storage",
-      "Razorpay payment flow for event tickets",
+      "Razorpay payment integration live for event tickets",
       "Grown to 2,000+ visitors a month",
     ],
     challenges: [
@@ -39,6 +42,7 @@ export const projects: Project[] = [
   },
   {
     slug: "ai-native-cms",
+    image: "ai-native-cms.jpg",
     name: "AI-native CMS for atlan.com",
     description:
       "A content system that lets Marketing launch campaign pages themselves. Campaign go-live went from 4 days to under 5 minutes across 500+ pages.",
@@ -60,6 +64,7 @@ export const projects: Project[] = [
   },
   {
     slug: "landing-page-orchestrator",
+    image: "landing-page-orchestrator.svg",
     name: "Landing-page orchestrator skill",
     description:
       "The team's first Claude Code skill that builds a landing page end to end with no engineer in the loop. Taken from a rough proof of concept to production.",
@@ -81,24 +86,25 @@ export const projects: Project[] = [
   },
   {
     slug: "links",
+    image: "links.svg",
     name: "LINKS",
     description:
       "One link for all your links. An open-source linktr.ee alternative with analytics and short links through KZILLA.XYZ, built at SRMKZILLA.",
     fullDescription:
-      "LINKS lets you put every link you care about behind a single URL, with click analytics and short links through KZILLA.XYZ. I built it as Technical Associate Lead at SRMKZILLA, Mozilla's campus club at SRM, on Next.js, Tailwind, MongoDB, and Node.js. It's open source and live at kzlinks.net.",
+      "LINKS lets you put every link you care about behind a single URL, with click analytics and short links through KZILLA.XYZ. I built it as Technical Associate Lead at SRMKZILLA, Mozilla's campus club at SRM, on Next.js, Tailwind, MongoDB, and Node.js. The code is open source under the srm-kzilla org.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Node.js"],
-    impact: "Open source, live at kzlinks.net",
+    impact: "Open source under srm-kzilla",
     highlights: [
       "Single public link page with analytics",
       "Short links through KZILLA.XYZ",
       "Open source under the srm-kzilla org",
     ],
     github: "https://github.com/srm-kzilla/links",
-    live: "https://kzlinks.net/",
     featured: true,
   },
   {
     slug: "studeaz",
+    image: "studeaz.svg",
     name: "StudEaz",
     description:
       "A browser extension that downloads multiple files from Google Classroom in one go. Shipped on the Chrome and Firefox stores under Microsoft Learn Student Ambassadors SRM.",
@@ -111,10 +117,10 @@ export const projects: Project[] = [
       "Published on Chrome and Firefox stores",
       "Open source project under MLSA SRM",
     ],
-    live: "https://chrome.google.com/webstore/detail/studeaz-for-google-classr/ddmpckcmhpnpgfcgfgeklphbbigknjgf",
   },
   {
     slug: "python-clik",
+    image: "python-clik.jpg",
     name: "Python-CLIK",
     description:
       "Command Line Interface for Keys: a pip-installable tool that encrypts your API keys and secret tokens so they never reach a remote repo.",
@@ -132,6 +138,7 @@ export const projects: Project[] = [
   },
   {
     slug: "quizeasy",
+    image: "quizeasy.jpg",
     name: "QuizEasy",
     description:
       "Upload a PDF or DOC and get quiz questions generated from it on the go.",
@@ -148,6 +155,7 @@ export const projects: Project[] = [
   },
   {
     slug: "moviebot",
+    image: "moviebot.svg",
     name: "MovieBot",
     description:
       "A movie recommendation chatbot built on a cosine-similarity model and served with Flask. My final-year project.",
@@ -164,6 +172,7 @@ export const projects: Project[] = [
   },
   {
     slug: "findemy",
+    image: "findemy.jpg",
     name: "Findemy",
     description:
       "A cut-down, full-stack Udemy clone built on React, Node.js, Express, and MongoDB.",
@@ -180,6 +189,8 @@ export const projects: Project[] = [
     live: "https://findemy.netlify.app",
   },
 ];
+
+export const thumbUrl = (file: string) => `${import.meta.env.BASE_URL}thumbs/${file}`;
 
 export const featuredProjects = projects.filter((p) => p.featured);
 

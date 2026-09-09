@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-label="StudEaz extension: bulk download from Google Classroom">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1c1c1c" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="540" fill="#0a0a0a"/>
+  <rect width="960" height="540" fill="url(#grid)"/>
+  <!-- browser window -->
+  <rect x="80" y="60" width="800" height="420" rx="14" fill="#111" stroke="#262626" stroke-width="2"/>
+  <rect x="80" y="60" width="800" height="48" rx="14" fill="#171717"/>
+  <rect x="80" y="94" width="800" height="14" fill="#171717"/>
+  <circle cx="108" cy="84" r="6" fill="#ff5f57"/>
+  <circle cx="130" cy="84" r="6" fill="#febc2e"/>
+  <circle cx="152" cy="84" r="6" fill="#28c840"/>
+  <rect x="190" y="70" width="520" height="28" rx="8" fill="#0a0a0a" stroke="#262626"/>
+  <text x="206" y="90" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#737373">classroom.google.com/c/…/m/…/details</text>
+  <!-- extension button -->
+  <rect x="732" y="68" width="128" height="32" rx="8" fill="#4ade80"/>
+  <text x="796" y="90" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="600" fill="#0a0a0a" text-anchor="middle">StudEaz ⤓</text>
+  <!-- attachment rows -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#d4d4d4">
+    <text x="120" y="150" fill="#737373">// 6 attachments · Week 4 · Data Structures</text>
+    <g>
+      <rect x="120" y="172" width="720" height="40" rx="8" fill="#171717" stroke="#262626"/>
+      <text x="140" y="199"><tspan fill="#4ade80">✓</tspan>  lecture-04-trees.pdf</text>
+      <text x="820" y="199" fill="#737373" text-anchor="end">2.1 MB</text>
+    </g>
+    <g>
+      <rect x="120" y="222" width="720" height="40" rx="8" fill="#171717" stroke="#262626"/>
+      <text x="140" y="249"><tspan fill="#4ade80">✓</tspan>  assignment-04.docx</text>
+      <text x="820" y="249" fill="#737373" text-anchor="end">180 KB</text>
+    </g>
+    <g>
+      <rect x="120" y="272" width="720" height="40" rx="8" fill="#171717" stroke="#262626"/>
+      <text x="140" y="299"><tspan fill="#4ade80">✓</tspan>  bst-examples.zip</text>
+      <text x="820" y="299" fill="#737373" text-anchor="end">4.6 MB</text>
+    </g>
+    <g>
+      <rect x="120" y="322" width="720" height="40" rx="8" fill="#171717" stroke="#262626"/>
+      <text x="140" y="349"><tspan fill="#4ade80">✓</tspan>  slides-04.pptx</text>
+      <text x="820" y="349" fill="#737373" text-anchor="end">9.3 MB</text>
+    </g>
+    <g>
+      <rect x="120" y="372" width="720" height="40" rx="8" fill="#171717" stroke="#262626"/>
+      <text x="140" y="399"><tspan fill="#4ade80">✓</tspan>  reading-list.pdf</text>
+      <text x="820" y="399" fill="#737373" text-anchor="end">640 KB</text>
+    </g>
+    <text x="120" y="452" fill="#737373">// one click · 6 files · 16.8 MB · downloading…</text>
+    <rect x="120" y="462" width="720" height="6" rx="3" fill="#262626"/>
+    <rect x="120" y="462" width="520" height="6" rx="3" fill="#4ade80"/>
+  </g>
+</svg>

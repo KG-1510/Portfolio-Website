@@ -29,7 +29,7 @@ export default function Work() {
                 key={project.slug}
                 className={`opacity-0 animate-fade-in-up stagger-${Math.min(index + 2, 4)}`}
               >
-                <ProjectCard {...project} className="hover-lift" />
+                <ProjectCard {...project} layout="row" className="hover-lift" />
               </div>
             ))}
           </div>

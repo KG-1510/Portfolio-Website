@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-label="Terminal running the landing-page orchestrator skill">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1c1c1c" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="540" fill="#0a0a0a"/>
+  <rect width="960" height="540" fill="url(#grid)"/>
+  <rect x="80" y="60" width="800" height="420" rx="14" fill="#111" stroke="#262626" stroke-width="2"/>
+  <rect x="80" y="60" width="800" height="44" rx="14" fill="#171717"/>
+  <rect x="80" y="90" width="800" height="14" fill="#171717"/>
+  <circle cx="108" cy="82" r="6" fill="#ff5f57"/>
+  <circle cx="130" cy="82" r="6" fill="#febc2e"/>
+  <circle cx="152" cy="82" r="6" fill="#28c840"/>
+  <text x="480" y="87" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#737373" text-anchor="middle">claude — /landing-page-orchestrator</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#d4d4d4">
+    <text x="120" y="150"><tspan fill="#4ade80">$</tspan> claude /landing-page-orchestrator "Q3 context-layer campaign"</text>
+    <text x="120" y="192" fill="#737373">// brief → copy → layout → build → review</text>
+    <text x="120" y="234"><tspan fill="#4ade80">✓</tspan> copy drafted from the brief and brand voice</text>
+    <text x="120" y="272"><tspan fill="#4ade80">✓</tspan> page assembled from design-system blocks</text>
+    <text x="120" y="310"><tspan fill="#4ade80">✓</tspan> performance, accessibility, SEO budgets held</text>
+    <text x="120" y="348"><tspan fill="#4ade80">✓</tspan> pull request opened, preview deployed</text>
+    <text x="120" y="404" fill="#737373">// engineers in the loop: 0</text>
+    <text x="120" y="446"><tspan fill="#4ade80">$</tspan> <tspan fill="#4ade80">▍</tspan></text>
+  </g>
+</svg>
