@@ -1,11 +1,30 @@
-# My Portfolio Website
+# Portfolio
 
-A website made by me, Showcasing my experience, skills and projects. Fully responsive.
+My personal site: [kg-1510.github.io/Portfolio-Website](https://kg-1510.github.io/Portfolio-Website/)
 
-## Made using:-
- * <img align="left" alt="HTML5" width="20px" src="https://cdn.iconscout.com/icon/free/png-64/html5-2038876-1720089.png" /> HTML5
- * <img align="left" alt="CSS3" width="20px" src="https://cdn.iconscout.com/icon/free/png-64/css-37-226088.png" /> CSS3
- * <img align="left" alt="JavaScript" width="20px" src="https://cdn.iconscout.com/icon/free/png-64/javascript-1-225993.png" /> Javascript
- * <img align="left" alt="BootStrap" width="20px" src="https://cdn.iconscout.com/icon/free/png-64/bootstrap-226077.png" /> Bootstrap
+Vite, React 18, TypeScript, Tailwind CSS, shadcn/ui. Started from Lovable's terminal-style
+portfolio template, then rebuilt around real content.
 
-Visit the website by clicking [here](https://kg-1510.github.io/Portfolio-Website/)
+## Edit content
+
+Everything the site says lives in two files:
+
+- `src/data/profile.ts`: name, bio, experience, skills, links
+- `src/data/projects.ts`: the projects on `/work` and their detail pages
+
+Pages under `src/pages/` only render that data.
+
+## Run locally
+
+```sh
+npm install
+npm run dev
+```
+
+Opens on `http://localhost:8080`.
+
+## Deploy
+
+Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes
+`dist/` to GitHub Pages. `vite.config.ts` sets `base` to `/Portfolio-Website/`, and the build
+copies `index.html` to `404.html` so deep links like `/work/stride-club` load on Pages.
