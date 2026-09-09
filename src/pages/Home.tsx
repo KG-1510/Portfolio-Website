@@ -14,7 +14,7 @@ export default function Home() {
     <Layout>
       {/* Hero */}
       <section className="relative min-h-[80vh] flex items-center bg-grid">
-        <div className="container">
+        <div className="container grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_auto]">
           <div className="max-w-3xl opacity-0 animate-fade-in-up">
             <CodeLabel className="mb-6">{profile.title}</CodeLabel>
 
@@ -42,6 +42,20 @@ export default function Home() {
                   Resume
                 </a>
               </Button>
+            </div>
+          </div>
+
+          {/* Headshot */}
+          <div className="order-first justify-self-start lg:order-none lg:justify-self-end opacity-0 animate-fade-in-up stagger-1">
+            <div className="relative h-40 w-40 md:h-56 md:w-56 lg:h-72 lg:w-72 overflow-hidden rounded-2xl border-2 border-primary/30 transition-all duration-300 hover:border-primary hover-lift">
+              <img
+                src={profile.photo}
+                alt={profile.name}
+                className="h-full w-full object-cover"
+                width={288}
+                height={288}
+                fetchPriority="high"
+              />
             </div>
           </div>
         </div>

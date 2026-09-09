@@ -167,6 +167,7 @@ export const profile = {
     },
     {
       company: "SRM Institute of Science and Technology",
+      logo: "srmist.edu.in.jpg",
       role: "Campus roles",
       period: "2019 – 2022",
       location: "Chennai",
