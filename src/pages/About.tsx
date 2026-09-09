@@ -3,7 +3,7 @@ import { CodeDivider } from "@/components/ui/CodeDivider";
 import { TechTag } from "@/components/ui/TechTag";
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
-import { profile } from "@/data/profile";
+import { logoUrl, profile } from "@/data/profile";
 
 export default function About() {
   return (
@@ -75,15 +75,33 @@ export default function About() {
                 {profile.experience.map((entry) => (
                   <li key={`${entry.company}-${entry.role}`} className="pl-6 relative">
                     <span className="absolute -left-[5px] top-2 h-2 w-2 rounded-full bg-primary" />
-                    <div className="flex flex-col gap-1 mb-3 md:flex-row md:items-baseline md:justify-between">
-                      <div>
-                        <h3 className="font-mono text-base font-medium text-foreground">
-                          {entry.role}
-                        </h3>
-                        <p className="text-sm text-primary">
-                          {entry.company}
-                          <span className="text-muted-foreground"> · {entry.location}</span>
-                        </p>
+                    <div className="flex flex-col gap-1 mb-3 md:flex-row md:items-start md:justify-between">
+                      <div className="flex items-start gap-3">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-border bg-white/95 p-1.5">
+                          {entry.logo ? (
+                            <img
+                              src={logoUrl(entry.logo)}
+                              alt={`${entry.company} logo`}
+                              className="h-full w-full object-contain"
+                              loading="lazy"
+                              width={40}
+                              height={40}
+                            />
+                          ) : (
+                            <span className="font-mono text-sm font-medium text-background">
+                              {entry.company.charAt(0)}
+                            </span>
+                          )}
+                        </div>
+                        <div>
+                          <h3 className="font-mono text-base font-medium text-foreground">
+                            {entry.role}
+                          </h3>
+                          <p className="text-sm text-primary">
+                            {entry.company}
+                            <span className="text-muted-foreground"> · {entry.location}</span>
+                          </p>
+                        </div>
                       </div>
                       <span className="font-mono text-xs text-muted-foreground whitespace-nowrap">
                         {entry.period}

@@ -5,8 +5,12 @@ export interface ExperienceEntry {
   role: string;
   period: string;
   location: string;
+  /** File name under public/logos/, rendered next to the entry. */
+  logo?: string;
   bullets: string[];
 }
+
+export const logoUrl = (file: string) => `${import.meta.env.BASE_URL}logos/${file}`;
 
 export const profile = {
   name: "Kushagra Gupta",
@@ -71,6 +75,7 @@ export const profile = {
   experience: [
     {
       company: "Atlan",
+      logo: "atlan.com.svg",
       role: "Software Engineer 2, Website & Brand",
       period: "Mar 2026 – Present",
       location: "Remote",
@@ -83,6 +88,7 @@ export const profile = {
     },
     {
       company: "Atlan",
+      logo: "atlan.com.svg",
       role: "Software Engineer 1, Website & Brand",
       period: "Oct 2024 – Mar 2026",
       location: "Remote",
@@ -94,6 +100,7 @@ export const profile = {
     },
     {
       company: "Bajaj Finserv",
+      logo: "bajajfinserv.in.svg",
       role: "Software Engineer",
       period: "Jul 2023 – Oct 2024",
       location: "Pune",
@@ -106,6 +113,7 @@ export const profile = {
     },
     {
       company: "Bajaj Finserv",
+      logo: "bajajfinserv.in.svg",
       role: "SDE Intern (BYTE)",
       period: "Jan 2023 – Jun 2023",
       location: "Pune",
@@ -117,6 +125,7 @@ export const profile = {
     },
     {
       company: "Atlan",
+      logo: "atlan.com.svg",
       role: "Frontend Engineer Intern",
       period: "Aug 2022 – Nov 2022",
       location: "Remote",
@@ -137,6 +146,7 @@ export const profile = {
     },
     {
       company: "Fiserv",
+      logo: "fiserv.com.svg",
       role: "Summer Intern",
       period: "Jun 2022 – Jul 2022",
       location: "Bengaluru",
@@ -187,7 +197,7 @@ export const profile = {
     github: { href: "https://github.com/KG-1510", handle: "@KG-1510" },
     linkedin: { href: "https://www.linkedin.com/in/kg1510", handle: "/in/kg1510" },
     youtube: { href: "https://www.youtube.com/kguitar", handle: "kguitar" },
-    instagram: { href: "https://www.instagram.com/aye_that_guitar_guy", handle: "@aye_that_guitar_guy" },
+    instagram: { href: "https://www.instagram.com/kushagra.gupta.15/", handle: "@kushagra.gupta.15" },
   },
 
   availability:
