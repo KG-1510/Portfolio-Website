@@ -24,7 +24,7 @@ export const flagship = {
   slug: "stride-club",
   label: "Flagship project",
   name: "Stride Run Club web app",
-  tagline: "The full tech stack behind Bengaluru's most engaged running community.",
+  tagline: "The ticketing platform behind Bengaluru's most engaged running community.",
   url: "https://www.strideclub.in",
   urlLabel: "strideclub.in",
   image: "stride-club.jpg",

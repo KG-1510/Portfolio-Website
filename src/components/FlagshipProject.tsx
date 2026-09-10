@@ -48,6 +48,18 @@ export function FlagshipProject() {
                 </Link>
               </Button>
             </div>
+
+            {/* Stats */}
+            <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-4 border-t border-border pt-6">
+              {flagship.stats.map((stat) => (
+                <div key={stat.label}>
+                  <dd className="font-mono text-xl md:text-2xl font-bold text-primary tracking-tight">
+                    {stat.value}
+                  </dd>
+                  <dt className="text-xs text-muted-foreground mt-0.5">{stat.label}</dt>
+                </div>
+              ))}
+            </dl>
           </div>
 
           <a
@@ -68,18 +80,6 @@ export function FlagshipProject() {
             </div>
           </a>
         </div>
-
-        {/* Stats */}
-        <dl className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4 opacity-0 animate-fade-in-up stagger-2">
-          {flagship.stats.map((stat) => (
-            <div key={stat.label} className="rounded-lg border border-border bg-card p-6 md:p-8">
-              <dd className="font-mono text-4xl md:text-5xl lg:text-6xl font-bold text-primary tracking-tight">
-                {stat.value}
-              </dd>
-              <dt className="text-sm md:text-base text-muted-foreground mt-2">{stat.label}</dt>
-            </div>
-          ))}
-        </dl>
 
         {/* Screenshot carousel */}
         <div className="mt-12 opacity-0 animate-fade-in-up stagger-3">
