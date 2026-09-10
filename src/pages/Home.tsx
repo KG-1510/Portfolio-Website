@@ -8,6 +8,7 @@ import { TypingCursor } from "@/components/ui/TypingCursor";
 import { ArrowRight, FileText } from "lucide-react";
 import { profile } from "@/data/profile";
 import { featuredProjects } from "@/data/projects";
+import { FlagshipProject } from "@/components/FlagshipProject";
 
 export default function Home() {
   return (
@@ -54,21 +55,25 @@ export default function Home() {
                 className="h-full w-full object-cover"
                 width={288}
                 height={288}
-                fetchPriority="high"
+                // React 18 only forwards the lowercase form; React's types only know the camelCase one.
+                {...({ fetchpriority: "high" } as Record<string, string>)}
               />
             </div>
           </div>
         </div>
       </section>
 
+      {/* Flagship project */}
+      <FlagshipProject />
+
       {/* Featured Projects */}
-      <section className="py-20">
+      <section className="py-20 border-t border-border">
         <div className="container">
           <div className="opacity-0 animate-fade-in-up">
-            <CodeDivider label="Featured Work" />
+            <CodeDivider label="More Work" />
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuredProjects.map((project, index) => (
               <div
                 key={project.slug}

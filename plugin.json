@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kushagra-gupta-portfolio",
+  "version": "1.0.0",
+  "description": "Answer questions about Kushagra Gupta, Software Engineer 2 at Atlan: his work history, the projects he has built (including the Stride Run Club web app), his stack, and how to contact him. Read-only.",
+  "homepage": "https://kg-1510.github.io/Portfolio-Website/",
+  "repository": "https://github.com/KG-1510/Portfolio-Website",
+  "license": "MIT",
+  "author": {
+    "name": "Kushagra Gupta",
+    "url": "https://kg-1510.github.io/Portfolio-Website/",
+    "email": "guptakushagra15.10@gmail.com"
+  },
+  "keywords": ["portfolio", "software engineer", "frontend", "full-stack", "ai-native", "atlan", "bengaluru", "react", "next.js", "claude code"],
+  "skills": ["./skills/kushagra-gupta-portfolio/SKILL.md"],
+  "authentication": {
+    "required": false
+  }
+}

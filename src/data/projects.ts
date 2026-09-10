@@ -22,23 +22,29 @@ export const projects: Project[] = [
     image: "stride-club.jpg",
     name: "Stride Run Club web app",
     description:
-      "The web app for my run club, built and launched solo on Next.js and Supabase. 2,000+ visitors a month, with Razorpay payments already live for event tickets.",
+      "The full stack behind Bengaluru's most engaged running community: sign-ups, Razorpay ticketing, Strava-synced runs, memberships, and an admin console. Designed, built, and run solo.",
     fullDescription:
-      "strideclub.in started as a place for my run club to point people at. I designed, built, and launched it alone with Next.js and Supabase. It now brings in 2,000+ visitors a month, and event ticketing runs on it with Razorpay payments already integrated.",
-    stack: ["Next.js", "TypeScript", "Supabase", "Razorpay", "Tailwind CSS"],
-    impact: "2,000+ monthly visitors, payments live, solo build",
+      "strideclub.in is the web app for Stride Run Club Bengaluru, a community of 7,000+ athletes and 52,000+ Instagram followers that runs 97+ events a year. I designed, built, and run it alone on Next.js 16 and Supabase. It handles user onboarding with Google sign-in, paid event registrations through Razorpay with signature-verified webhooks, Strava-connected run tracking with a club leaderboard, membership and pricing tiers, transactional email through Brevo, and an admin console for events, registrations, products, users, and start-line check-in. It also exposes an MCP server and agent card so AI assistants can read the club's events.",
+    stack: ["Next.js 16", "React 19", "TypeScript", "Supabase", "PostgreSQL", "Razorpay", "Strava API", "Tailwind CSS v4", "Vercel"],
+    impact: "7,000+ athletes, 97+ events a year, payments live, solo build",
     highlights: [
-      "Built and launched solo, from design to deploy",
-      "Supabase for auth, data, and storage",
-      "Razorpay payment integration live for event tickets",
-      "Grown to 2,000+ visitors a month",
+      "Complete backend on Supabase: Postgres, Auth, Storage, cron, signed webhooks",
+      "Razorpay payment gateway with signature-verified webhooks",
+      "User onboarding: Google sign-in, profile setup, become-a-member flow",
+      "Ticketing: event pages, capacity, registration states, start-line check-in",
+      "Run tracking: Strava connect, My Runs, club leaderboard and milestones",
+      "Membership status and pricing tiers on every profile",
+      "Admin-side config for events, registrations, products, users",
+      "UI/UX designed from the club's identity, mobile first, Framer Motion",
+      "Agent-ready: MCP server, agent card, OpenAPI spec, markdown feeds",
     ],
     challenges: [
-      "Turning a static club page into a product with accounts and payments",
-      "Shipping every layer alone: design, frontend, database, payments, deploy",
+      "Turning a static club page into a product with accounts, payments, and an admin console, alone",
+      "Making payment state trustworthy: a registration confirms only after the webhook signature checks out",
+      "Keeping one Supabase project safe across staging and production deploys",
     ],
-    live: "https://strideclub.in",
-    featured: true,
+    live: "https://www.strideclub.in",
+    featured: false,
   },
   {
     slug: "ai-native-cms",
@@ -190,7 +196,8 @@ export const projects: Project[] = [
   },
 ];
 
-export const thumbUrl = (file: string) => `${import.meta.env.BASE_URL}thumbs/${file}`;
+export const thumbUrl = (file: string) =>
+  `${import.meta.env?.BASE_URL ?? "/Portfolio-Website/"}thumbs/${file}`;
 
 export const featuredProjects = projects.filter((p) => p.featured);
 

@@ -64,7 +64,12 @@ export default function Contact() {
             <div>
               <CodeDivider label="Send a Message" />
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-6"
+                toolname="draft_contact_email"
+                tooldescription="Compose an email to Kushagra Gupta. Fill name, email and message, then submit to open the visitor's mail client with the message prefilled. Nothing is sent until the human presses send."
+              >
                 <div className="space-y-2">
                   <Label htmlFor="name" className="font-mono text-sm">
                     <span className="text-primary">{"//"}</span> Name

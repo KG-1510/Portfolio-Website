@@ -10,7 +10,11 @@ export interface ExperienceEntry {
   bullets: string[];
 }
 
-export const logoUrl = (file: string) => `${import.meta.env.BASE_URL}logos/${file}`;
+export const logoUrl = (file: string) =>
+  `${import.meta.env?.BASE_URL ?? "/Portfolio-Website/"}logos/${file}`;
+
+// Guarded so the same module can be imported from vite.config (no import.meta.env there).
+const BASE: string = import.meta.env?.BASE_URL ?? "/Portfolio-Website/";
 
 export const profile = {
   name: "Kushagra Gupta",
@@ -21,8 +25,8 @@ export const profile = {
   location: "Bengaluru, India",
   email: "guptakushagra15.10@gmail.com",
   siteUrl: "https://kg-1510.github.io/Portfolio-Website/",
-  photo: `${import.meta.env.BASE_URL}me.jpg`,
-  resume: `${import.meta.env.BASE_URL}resume.pdf`,
+  photo: `${BASE}me.jpg`,
+  resume: `${BASE}resume.pdf`,
 
   intro:
     "I turn ideas into shipped, production web products in hours instead of weeks. The trick isn't writing more code. It's building the systems that let AI do the heavy lifting, and getting them right.",

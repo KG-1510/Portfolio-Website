@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { WebMcpTools } from "@/components/WebMcpTools";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
 import ProjectDetail from "./pages/ProjectDetail";
@@ -21,6 +22,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter basename={import.meta.env.BASE_URL}>
         <ScrollToTop />
+        <WebMcpTools />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<Work />} />

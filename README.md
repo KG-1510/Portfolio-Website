@@ -23,6 +23,15 @@ npm run dev
 
 Opens on `http://localhost:8080`.
 
+## For AI agents
+
+`agent-files.plugin.ts` generates the agent-facing layer at build time from `src/data`:
+`llms.txt`, `llms-full.txt`, `agents.md`, a `.md` twin of every page, `sitemap.xml`,
+`robots.txt`, `.well-known/ard.json`, `.well-known/agent-skills/index.json`, and JSON-LD in
+`index.html`. In-page WebMCP tools are registered from `src/components/WebMcpTools.tsx`.
+`AGENTS.md` is for coding agents working on this repo; `plugin.json` and `skills/` describe
+the site as an agent plugin.
+
 ## Deploy
 
 Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes
