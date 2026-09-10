@@ -32,6 +32,18 @@ export const flagship = {
   intro:
     "strideclub.in is the web app for Stride Run Club Bengaluru, and I designed, built, and run it alone. It started as a page to point people at. Today it handles sign-ups, paid event registrations, Strava-synced runs, memberships, and the admin work behind 97+ events a year, for a community of 7,000+ athletes and 52,000+ Instagram followers.",
 
+  /** Screenshots under public/stride/, 16:9, in carousel order. */
+  screens: [
+    { file: "stride-home.jpg", title: "Home", caption: "\"Move as one.\" The landing page, with the next runs and the member CTA." },
+    { file: "stride-events.jpg", title: "Events", caption: "Every upcoming run with venue, distance, price, and registration state." },
+    { file: "stride-become-a-member.jpg", title: "Onboarding", caption: "Become a member: Google sign-in, profile, and a Stride Tag that tracks runs attended." },
+    { file: "stride-leaderboard.jpg", title: "Leaderboard", caption: "Club leaderboard built from Strava-synced runs." },
+    { file: "stride-milestones.jpg", title: "Milestones", caption: "Membership tiers and what each one unlocks." },
+    { file: "stride-pricing.jpg", title: "Pricing", caption: "Free membership; event tickets priced per run, paid through Razorpay." },
+    { file: "stride-about.jpg", title: "About", caption: "Who Stride is, how a run works, and the 2025 numbers." },
+    { file: "stride-blog.jpg", title: "Blog", caption: "Markdown blog with an admin editor behind it." },
+  ],
+
   stats: [
     { value: "52,000+", label: "Instagram followers" },
     { value: "7,000+", label: "athletes" },

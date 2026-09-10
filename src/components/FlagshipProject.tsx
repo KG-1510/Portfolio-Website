@@ -3,8 +3,17 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CodeDivider } from "@/components/ui/CodeDivider";
 import { TechTag } from "@/components/ui/TechTag";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { flagship } from "@/data/flagship";
 import { thumbUrl } from "@/data/projects";
+
+const screenUrl = (file: string) => `${import.meta.env.BASE_URL}stride/${file}`;
 
 export function FlagshipProject() {
   return (
@@ -63,12 +72,50 @@ export function FlagshipProject() {
         {/* Stats */}
         <dl className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4 opacity-0 animate-fade-in-up stagger-2">
           {flagship.stats.map((stat) => (
-            <div key={stat.label} className="rounded-lg border border-border bg-card p-4">
-              <dd className="font-mono text-2xl md:text-3xl font-bold text-primary">{stat.value}</dd>
-              <dt className="text-xs md:text-sm text-muted-foreground mt-1">{stat.label}</dt>
+            <div key={stat.label} className="rounded-lg border border-border bg-card p-6 md:p-8">
+              <dd className="font-mono text-4xl md:text-5xl lg:text-6xl font-bold text-primary tracking-tight">
+                {stat.value}
+              </dd>
+              <dt className="text-sm md:text-base text-muted-foreground mt-2">{stat.label}</dt>
             </div>
           ))}
         </dl>
+
+        {/* Screenshot carousel */}
+        <div className="mt-12 opacity-0 animate-fade-in-up stagger-3">
+          <p className="font-mono text-sm text-primary mb-6">
+            <span className="text-muted-foreground">/*</span> Inside the app{" "}
+            <span className="text-muted-foreground">*/</span>
+          </p>
+          <Carousel opts={{ loop: true, align: "start" }} className="relative">
+            <CarouselContent className="-ml-4">
+              {flagship.screens.map((screen) => (
+                <CarouselItem key={screen.file} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <figure className="group h-full rounded-lg border border-border bg-card overflow-hidden transition-colors hover:border-primary/50">
+                    <div className="aspect-video overflow-hidden border-b border-border">
+                      <img
+                        src={screenUrl(screen.file)}
+                        alt={`${flagship.name}: ${screen.title}`}
+                        className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                        loading="lazy"
+                        width={1200}
+                        height={675}
+                      />
+                    </div>
+                    <figcaption className="p-4">
+                      <p className="font-mono text-sm text-foreground mb-1">
+                        <span className="text-primary">{"//"}</span> {screen.title}
+                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{screen.caption}</p>
+                    </figcaption>
+                  </figure>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="-left-3 md:-left-5 border-border bg-card hover:bg-card hover:text-primary" />
+            <CarouselNext className="-right-3 md:-right-5 border-border bg-card hover:bg-card hover:text-primary" />
+          </Carousel>
+        </div>
 
         {/* Capabilities */}
         <div className="mt-12 opacity-0 animate-fade-in-up stagger-3">
